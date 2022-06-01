@@ -42,12 +42,20 @@ function draw() {
   rectMode(CENTER);
   background(0);
 
-  groundObj.show();
-  leftSide.show()
+  groundObj.display()
+  leftSide.display()
+
   
   drawSprites();
  
 }
 
+function keyPressed(){
+	if(keyCode === UP_ARROW){
+
+		Matter.Body.applyForce(ball,{x:0,y:0},{x:0.05,y:0.05})
+
+	}
+}
 
 
